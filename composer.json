@@ -1,0 +1,9 @@
+{
+    "name": "jonmcpartland/wp-image-optimiser",
+    "description": "Optimises images prior to upload.",
+    "homepage": "https://github.com/JonMcPartland/wp-image-optimiser.git",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
