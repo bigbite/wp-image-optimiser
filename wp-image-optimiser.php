@@ -20,6 +20,15 @@ new class {
 
 	protected $optimiser;
 
+	protected static $allowedMimes = [
+		'image/jpeg',
+		'image/gif',
+		'image/png',
+		'image/bmp',
+		'image/tiff',
+		'image/x-icon',
+	];
+
 	public function __construct() {
 		\add_filter( 'wp_handle_upload_prefilter', [ $this, 'upload' ] );
 
@@ -27,6 +36,11 @@ new class {
 	}
 
 	public function upload( $file ) {
+		// bail if not an image
+		if ( ! in_array( $file['type'], static::$allowedMimes ) ) {
+			return $file;
+		}
+
 		try {
 			$this->optimiser->load( $file['tmp_name'], $file['name'] );
 		} catch ( ImagickException $e ) {
