@@ -14,7 +14,6 @@ class Optimiser {
 	protected $name;
 
 	protected static $defaults = [
-		'imageType'   => 'jpg',
 		'maxWidth'    => 2000,
 		'maxHeight'   => 2000,
 		'quality'     => 80,
@@ -97,7 +96,6 @@ class Optimiser {
 	}
 
 	protected function prepare() {
-		$this->imagick->setImageFormat( $this->settings['imageType'] );
 		$this->imagick->stripImage();
 
 		return $this;
