@@ -1,7 +1,7 @@
 {
-    "name": "jonmcpartland/wp-image-optimiser",
+    "name": "bigbitecreative/wp-image-optimiser",
     "description": "Optimises images prior to upload.",
-    "homepage": "https://github.com/JonMcPartland/wp-image-optimiser.git",
+    "homepage": "https://github.com/bigbitecreative/wp-image-optimiser.git",
     "type": "wordpress-plugin",
     "require": {
         "composer/installers": "~1.0"
