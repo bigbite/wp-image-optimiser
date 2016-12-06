@@ -12,6 +12,12 @@ Author URI: https://jon.mcpart.land
 Textdomain: wp-image-optimiser
 */
 
+
+if ( ! class_exists( '\\Imagick' ) ) {
+	return;
+}
+
+
 require_once __DIR__ . '/includes/Optimiser.php';
 
 use ImagickException;
